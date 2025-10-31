@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Smart Summarizer",
+  "version": "2.2.0",
+  "description": "Summarize webpages or selected text using Gemini 2.5 Flash. History, context menu and in-page overlay.",
+  "license": "MIT",
+  "permissions": ["activeTab", "scripting", "contextMenus", "storage", "notifications"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

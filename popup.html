@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gemini Smart Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>🧠 Gemini Smart Summarizer</h2>
+
+    <div class="tabs">
+      <button id="tabSummarize" class="tab active">Summarize</button>
+      <button id="tabHistory" class="tab">History</button>
+    </div>
+
+    <div id="panelSummarize" class="panel">
+      <textarea id="inputText" placeholder="Paste text or click 'Summarize Page'"></textarea>
+
+      <div class="options">
+        <select id="summaryType">
+          <option value="brief">TL;DR</option>
+          <option value="detailed">Detailed</option>
+          <option value="bullets">Bullets</option>
+          <option value="insight">Key Insights</option>
+        </select>
+        <button id="themeToggle" title="Toggle theme">🌗</button>
+      </div>
+
+      <div class="actionRow">
+        <button id="summarizeBtn">Summarize Page</button>
+        <button id="summarizeSelectionBtn">Summarize Selection</button>
+      </div>
+
+      <div id="loader" class="loader hidden"></div>
+      <div id="output" class="output"></div>
+
+      <div class="actionsRow">
+        <button id="copyBtn" class="hidden">Copy</button>
+        <button id="saveBtn" class="hidden">Save</button>
+      </div>
+    </div>
+
+    <div id="panelHistory" class="panel hidden">
+      <div id="historyList" class="historyList"></div>
+      <div class="historyControls">
+        <button id="clearHistoryBtn">Clear History</button>
+      </div>
+    </div>
+
+    <footer>Powered by Gemini 2.5 Flash</footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
