@@ -114,7 +114,7 @@ Fast and lightweight UI powered by CSS variables
 Kanishk Yadav
 Developer •  Software Student • AI Enthusiast
 📧 Contact: yadavkanishk007@gmail.com
-🌐 GitHub: https://github.com/kanishkyadav
+🌐 GitHub: (https://github.com/yadavkanishk007-crypto)
 
 
 
